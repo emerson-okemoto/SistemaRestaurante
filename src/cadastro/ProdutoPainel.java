@@ -17,7 +17,6 @@ public class ProdutoPainel extends InterfacePainel {
      * o DTO e os componentes visuais
      */
     public ProdutoPainel(InterfaceDTO dto) {
-        dto = new ProdutoDTO(); // Cria o DTO (evita NullPointerException)
         initComponents(); // Cria os componentes da tela
         setDTO(dto); // Preenche a tela com o DTO (inicialmente vazio)
     }

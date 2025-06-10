@@ -16,7 +16,6 @@ public class LoginPainel extends InterfacePainel {
      * Creates new form LoginPainel
      */
     public LoginPainel(InterfaceDTO dto) {
-        dto = new LoginDTO(); // Inicializa o DTO no construtor para garantir que não seja nulo (evita NullPointerException)
         initComponents();
         setDTO(dto);
     }
