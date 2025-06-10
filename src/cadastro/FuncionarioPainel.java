@@ -18,7 +18,6 @@ public class FuncionarioPainel extends InterfacePainel {
      * Inicializa o DTO e os componentes visua
      */
     public FuncionarioPainel(InterfaceDTO dto) {
-        dto = new FuncionarioDTO(); // Cria o DTO para não ser nulo
         initComponents(); // Cria os componentes da tela
         setDTO(dto); // Preenche a tela com o DTO (inicialmente vazio)
     }

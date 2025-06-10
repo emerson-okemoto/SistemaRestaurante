@@ -27,7 +27,7 @@ public class CupomDTO extends InterfaceDTO {
         CupomDTO dto = new CupomDTO();
         Cupom cupom = (Cupom) e;
         dto.id = cupom.getId() == null ? "" : String.valueOf(cupom.getId());
-        dto.valorCupom = String.valueOf(cupom.getValorCupon());
+        dto.valorCupom = String.valueOf(cupom.getValorCupom());
         dto.codigo = cupom.getCodigo();
         dto.validade = cupom.getValidade() != null ? sdf.format(cupom.getValidade()) : "";
         return dto;
@@ -38,7 +38,7 @@ public class CupomDTO extends InterfaceDTO {
         Cupom cupom = new Cupom();
 
         cupom.setId(id == null || id.isEmpty() ? null : Integer.valueOf(id));
-        cupom.setValorCupon(valorCupom == null || valorCupom.isEmpty() ? 0.0 : Double.valueOf(valorCupom));
+        cupom.setValorCupom(valorCupom == null || valorCupom.isEmpty() ? 0.0 : Double.valueOf(valorCupom));
         cupom.setCodigo(codigo);
 
         if (validade != null && !validade.isEmpty()) {

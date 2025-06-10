@@ -7,7 +7,7 @@ import java.sql.Date;
 
 public class Cupom extends Entidade {
 
-    private Double valorCupon;
+    private Double valorCupom;
     private String codigo;
     private java.util.Date validade;
 
@@ -18,19 +18,19 @@ public class Cupom extends Entidade {
         setId(id);
     }
     
-    public Cupom(Integer id, Double valorCupon, String codigo, java.util.Date validade) {
+    public Cupom(Integer id, Double valorCupom, String codigo, java.util.Date validade) {
         setId(id); // método herdado da classe Entidade
-        this.valorCupon = valorCupon;
+        this.valorCupom = valorCupom;
         this.codigo = codigo;
         this.validade = validade;
     }
 
-    public Double getValorCupon() {
-        return valorCupon;
+    public Double getValorCupom() {
+        return valorCupom;
     }
 
-    public void setValorCupon(Double valorCupon) {
-        this.valorCupon = valorCupon;
+    public void setValorCupom(Double valorCupom) {
+        this.valorCupom = valorCupom;
     }
 
     public String getCodigo() {
@@ -56,7 +56,7 @@ public class Cupom extends Entidade {
 
     @Override
     public void setParameter(PreparedStatement ps) throws SQLException {
-        ps.setDouble(1, valorCupon);
+        ps.setDouble(1, valorCupom);
         ps.setString(2, codigo);
         ps.setDate(3, new Date(validade.getTime())); // convertendo java.util.Date para java.sql.Date
 
@@ -67,6 +67,6 @@ public class Cupom extends Entidade {
 
     @Override
     public String getUpdate() {
-        return "UPDATE cupom SET valor_cupon = ?, codigo = ?, validade = ? WHERE id = ?";
+        return "UPDATE cupom SET valor_cupom = ?, codigo = ?, validade = ? WHERE id = ?";
     }
 }

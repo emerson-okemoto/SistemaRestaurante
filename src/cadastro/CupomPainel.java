@@ -16,9 +16,8 @@ public class CupomPainel extends InterfacePainel {
      * Creates new form CupomPainel
      */
     public CupomPainel(InterfaceDTO dto) {
-        dto = new CupomDTO(); // Inicializa o DTO no construtor para garantir que não seja nulo (evita NullPointerException)
         initComponents();
-        setDTO(dto);
+        setDTO(dto != null ? dto : new CupomDTO());
     }
 
     /**

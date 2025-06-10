@@ -17,7 +17,6 @@ public class CartaoPainel extends InterfacePainel {
      * Creates new form CartaoPainel
      */
     public CartaoPainel(InterfaceDTO dto) {
-        dto = new CartaoDTO(); // Inicializa o DTO no construtor para garantir que não seja nulo (evita NullPointerException)
         initComponents();
         setDTO(dto);
     }

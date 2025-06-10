@@ -16,7 +16,6 @@ public class ClientePainel extends InterfacePainel {
      * Creates new form ClientePainel
      */
     public ClientePainel(InterfaceDTO dto) {
-        dto = new ClienteDTO(); // Inicializa o DTO no construtor para garantir que não seja nulo (evita NullPointerException)
         initComponents();
         setDTO(dto);
     }

@@ -12,18 +12,15 @@ public class BairroPainel extends InterfacePainel {
 
     private BairroDTO dto;
 
-    // Construtor padrão
-    public BairroPainel() {
-        dto = new BairroDTO();
-        initComponents();
-        setDTO(dto);
-    }
-
-    // Construtor com DTO (usado no menu)
+    // Construtor do painel BairroPainel
+    // Recebe um InterfaceDTO (pode ser um BairroDTO já preenchido ou null)
     public BairroPainel(InterfaceDTO dto) {
-        dto = new BairroDTO(); // Inicializa o DTO no construtor para garantir que não seja nulo (evita NullPointerException)
-        initComponents();
-        setDTO(dto);
+        initComponents(); // Inicializa os componentes visuais do painel (gerado pelo NetBeans)
+        
+        // Configura o DTO do painel:
+        // - Se foi passado um DTO (diferente de null), usa esse DTO (ex: para edição)
+        // - Se foi passado null, cria um novo CupomDTO (ex: para novo cadastro)
+        setDTO(dto != null ? dto : new BairroDTO()); // Respeita o DTO passado ou cria novo se necessário
     }
 
     /**

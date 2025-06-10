@@ -32,9 +32,9 @@ public class EnderecoPainel extends InterfacePainel {
      * Inicializa o painel e carrega os bairros no ComboBox.
      */
     public EnderecoPainel(InterfaceDTO dto) {
-        dto = new EnderecoDTO(); // Inicializa o DTO para evitar NullPointerException
-        initComponents(); // Método gerado pelo NetBeans para desenhar os componentes da tela
+        initComponents();
         carregarComboBoxBairros(); // Preenche o ComboBox com os bairros disponíveis
+        setDTO(dto != null ? dto : new EnderecoDTO()); // Aplica o DTO recebido ou um novo para preencher o painel
     }
 
     /**
@@ -161,9 +161,8 @@ public class EnderecoPainel extends InterfacePainel {
             }
         }
     }
-    
-    private static final Logger LOGGER = Logger.getLogger(EnderecoPainel.class.getName());
 
+    private static final Logger LOGGER = Logger.getLogger(EnderecoPainel.class.getName());
 
     /**
      * Método responsável por carregar a lista de bairros no ComboBox. É chamado
